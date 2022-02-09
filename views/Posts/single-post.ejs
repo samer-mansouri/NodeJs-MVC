@@ -1,0 +1,27 @@
+<%- include('../partials/navbar.ejs') %>
+<div class="container mt-3">
+
+
+  <a href="/postcreate">Post Create</a>
+
+  <% if (message) { %>
+    <div class="alert <%- alert %> mt-2 mb-2" role="alert">
+      <%- message %> 
+    </div>
+  <% } %>
+
+  <% if(post){ %> 
+  <div class="mt-4">
+        <p></p>
+        <div class="card" style="width: 40rem;">
+          <div class="card-body">
+            <h5 class="card-title"><a href="http://localhost:5000/profile/<%- post.user %>"><%- post.userFullName %> </a></h5>
+            <% if(post.picture){ %> 
+            <img src="<%- post.picture %>" class="card-img-top" alt="...">
+            <% } %> 
+            <p class="card-text"><%- post.content %></p>
+          </div>
+        </div>
+  </div>
+  <% } %> 
+</div>

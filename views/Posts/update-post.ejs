@@ -1,0 +1,25 @@
+<%- include('../partials/navbar.ejs') %>
+<div class="container mt-3">
+
+
+  <% if (message) { %>
+    <div class="alert <%- alert %> mt-2" role="alert">
+      <%- message %> 
+    </div>
+  <% } %>
+
+
+  <form action="/post/update/<%- post._id %>" method="POST">
+    <h2>Update Post Content</h2><hr />
+    
+
+    <div class="form-group">
+      <textarea name="content" class="form-control"><%- post.content %> </textarea>
+    </div>
+:
+    <div class="from-group mt-2">
+      <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+
+  </form>
+</div>

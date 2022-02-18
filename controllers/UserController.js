@@ -360,13 +360,13 @@ function sendMail(receiver, msg){
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'samermns24@gmail.com',
-      pass: 'wirxhpnsapibtkkn'
+      user: 'email',
+      pass: 'password'
     }
   });
 
   var mailOptions = {
-    from: 'samermns24@gmail.com',
+    from: 'email',
     to: receiver,
     subject: 'WEB APP Account verification',
     text: 'Please verify your Account !',
